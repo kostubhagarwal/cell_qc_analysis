@@ -7,10 +7,18 @@ data = pd.read_excel(file)
 
 column1 = data.iloc[:, 0]
 column2 = data.iloc[:, 1]
+column3 = data.iloc[:, 2]
 
-plt.plot(column1, column2)
-plt.xlabel("Column 1")
-plt.ylabel("Column 2")
-plt.title("Plot of Column 1 vs Column 2")
+plt.scatter(column1, column3)
+plt.xlabel("index")
+plt.ylabel("IR")
+plt.title("IR distribution")
+
+plt.show()
+
+plt.scatter(column1, column2)
+plt.xlabel("index")
+plt.ylabel("OCV")
+plt.title("OCV distribution")
 
 plt.show()
